@@ -13,6 +13,7 @@ body {
     line-height: 1.4;
     color: #333;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #171b2a;
 }
 h1 {
     margin-bottom: 16px;
@@ -37,6 +38,7 @@ button {
     font-size: 16px;
     transition: background 0.3s ease;
     border: 1px solid rgb(58, 105, 243);
+    border-radius: 10px;
 }
 button:hover {
     border: 1px solid rgb(18, 65, 203);
@@ -75,30 +77,40 @@ button:disabled {
     display: flex;
 }
 .chat__sidebar {
-    height: 100vh;
+    height: 92vh;
     color: #fff;
     background: #171b2a;
     width: 225px;
     overflow-y: scroll;
+    scrollbar-color: #171b2a;
+}
+.chat__sidebar::-webkit-scrollbar {
+    background-color: #171b2a;
 }
 .chat__main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    max-height: 100vh;
+    max-height: 92vh;
+    background-color: #1d2033;
 }
 .chat__messages {
     flex-grow: 1;
     padding: 24px 24px 0;
     overflow-y: scroll;
 }
+.chat__messages::-webkit-scrollbar {
+    background-color: #1d2033;
+}
 .message {
     margin-bottom: 16px;
+    color: gainsboro;
 }
 .message__name {
     font-weight: 600;
     font-size: 14px;
     margin-right: 8px;
+    color: white;
 }
 .message__meta {
     color: #777;
@@ -124,6 +136,7 @@ button:disabled {
     padding: 12px;
     margin: 0 16px 0 0;
     flex-grow: 1;
+    border-radius: 10px;
 }
 .compose button {
     font-size: 14px;
@@ -133,15 +146,17 @@ button:disabled {
     font-size: 22px;
     background: #2c2f3a;
     padding: 24px;
+    font-weight: bold;
 }
 .list-title {
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: bold;
+    font-size: 16px;
+    font-style: italic;
     margin-bottom: 4px;
     padding: 12px 24px 0;
 }
 .users {
-    list-style-type: none;
+    list-style-type: circle;
     font-weight: 300;
-    padding: 12px 24px 0;
+    padding: 12px 24px 0 2.2rem;
 }
