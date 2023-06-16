@@ -38,7 +38,10 @@ io.on('connection', (socket) => {
         }
 
         socket.join(user.room);
-        socket.emit('message', generateMessage('Welcome!'));
+        socket.emit(
+            'message',
+            generateMessage(`Welcome to ${user.room} room!`)
+        );
         socket.broadcast
             .to(user.room)
             .emit(
