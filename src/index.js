@@ -40,7 +40,9 @@ io.on('connection', (socket) => {
         socket.join(user.room);
         socket.emit(
             'message',
-            generateMessage(`Welcome to ${user.room} room!`)
+            generateMessage(
+                `This is the earliest record of your conversation.`
+            )
         );
         socket.broadcast
             .to(user.room)

@@ -131,12 +131,14 @@ button:disabled {
     margin-right: 16px;
 }
 .compose input {
-    border: 1px solid #eee;
+    border: 1px solid grey;
     width: 100%;
     padding: 12px;
     margin: 0 16px 0 0;
     flex-grow: 1;
     border-radius: 10px;
+    color: white;
+    background-color: #171b2a;
 }
 .compose button {
     font-size: 14px;
